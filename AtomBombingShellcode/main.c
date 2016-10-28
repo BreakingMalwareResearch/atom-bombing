@@ -53,7 +53,7 @@ void shellcode_entry()
 	}
 	
 	hNtDll = ptFunctionPointer->pfnLoadLibraryA(pszNtDll);
-	if (0 == hKernel32)
+	if (0 == hNtDll)
 	{
 		goto lblCleanup;
 	}
